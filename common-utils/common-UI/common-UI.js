@@ -177,7 +177,7 @@ export class CommonUI {
    * @param {String} selector Selector for element of interest
    * @param {Number} numElements Number of expected elements
    */
-  checkElementExists(selector, numElements, timeout = 60000) {
+  checkElementExists(selector, numElements, timeout = { timeout: 60000 }) {
     this.testRunner.get(selector, timeout).should('be.length', numElements)
   }
 
